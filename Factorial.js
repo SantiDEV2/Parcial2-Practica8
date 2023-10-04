@@ -1,4 +1,4 @@
-function Xfactorial() {
+export function Xfactorial() {
     let Xnum = 5;
     let solution = 1;
 

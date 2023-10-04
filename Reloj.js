@@ -1,10 +1,15 @@
-function hms(){
+export default function hms(){
     let fecha = new Date();
     let hrs = fecha.getHours();
     let min = fecha.getMinutes();
     let sec = fecha.getSeconds();
-
     let seconds;
+
+
+    setInterval(function () {
+        console.log(hms());
+    }, 1000);
+    
     seconds = sec < 10 ? seconds = `0${sec}` : seconds = sec;
     let minutes;
     minutes = min < 10 ? minutes = `0${min}` : minutes = min;
@@ -24,7 +29,3 @@ function hms(){
     }
     return `${hours}:${minutes}:${seconds} ${gmt}`;
 }
-
-setInterval(function () {
-    console.log(hms());
-}, 1000);

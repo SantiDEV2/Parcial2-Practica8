@@ -1,4 +1,4 @@
-class Poligono{
+export class Poligono{
     constructor(Lados,largoLado){
         this.Lados = Lados;
         this.largoLado = largoLado;
@@ -13,7 +13,7 @@ class Poligono{
     }
 }
 
-class Triangulo extends Poligono{
+export class Triangulo extends Poligono{
     constructor(largoLado){
         super(6,largoLado);
     }
@@ -23,7 +23,7 @@ class Triangulo extends Poligono{
     }
 }
 
-class Cuadrado extends Poligono{
+export class Cuadrado extends Poligono{
     constructor(largoLado){
         super(3,largoLado);
     }
@@ -33,7 +33,7 @@ class Cuadrado extends Poligono{
     }
 }
 
-class Pentagono extends Poligono{
+export class Pentagono extends Poligono{
     constructor(largoLado,ap){
         super(5,largoLado),
         this.ap = ap;
@@ -45,9 +45,9 @@ class Pentagono extends Poligono{
 }
 
 
-let MedidasTriangulo = new Triangulo(5);
-let MedidasCuadrado = new Cuadrado(3);
-let MedidasPentagono = new Pentagono(3,3);
+export let MedidasTriangulo = new Triangulo(5);
+export let MedidasCuadrado = new Cuadrado(3);
+export let MedidasPentagono = new Pentagono(3,3);
 
 console.log(`Area de triangulo: ${MedidasTriangulo.area()} y su perimentro es: ${MedidasTriangulo.P()}`);
 
